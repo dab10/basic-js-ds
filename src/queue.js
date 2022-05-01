@@ -18,7 +18,6 @@ class Queue {
   constructor () {
     this.head = null;
     this.tail = null;
-    this.length = 0;
   }
 
   getUnderlyingList() {
@@ -37,13 +36,11 @@ class Queue {
       this.tail = node;
     }
 
-    this.length++;
   }
 
   dequeue() {
       const current = this.head;
       this.head = this.head.next;
-      this.length--;
 
       return current.value;
   }
